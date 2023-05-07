@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: deadFont;
+    font-weight: 400;
+    src: url(../../public/fonts/AxiformaRegular.ttf);
+  }
+  @font-face {
+    font-family: deadFont;
+    font-weight: 500;
+    src: url(../../public/fonts/AxiformaMedium.ttf);
+  }
+  @font-face {
+    font-family: deadFont;
+    font-weight: 600;
+    src: url(../../public/fonts/AxiformaSemiBold.ttf);
+  }
+  @font-face {
+    font-family: codeFont;
+    src: url(../../public/fonts/fira-var.ttf);
+  }
+
+  body {
+    @apply m-0 h-screen w-screen overflow-x-hidden overflow-y-hidden bg-dead-black p-0 font-codeFont text-[14px] font-[400] text-dead-white md:text-[16px];
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  button {
+    @apply hover:cursor-pointer;
+  }
+
+  * {
+    @apply box-border border-none bg-dead-black text-dead-white outline-none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  ::-webkit-scrollbar {
+    @apply w-[5px] bg-dead-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-dead-green;
+  }
+}
