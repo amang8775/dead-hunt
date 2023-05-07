@@ -17,7 +17,7 @@ const LoginPage = () => {
       <div key={0}>
         Help me find my <span className="text-dead-green">mouse</span>!
       </div>,
-      "Login continue...",
+      "Login or create an account to continue...",
       "Enter your email...",
     ],
     showAsError: (item) => <div className="text-dead-error">{item}</div>,
