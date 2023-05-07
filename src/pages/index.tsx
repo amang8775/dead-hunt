@@ -1,25 +1,14 @@
 import TerminalWrapper from "@/components/Terminal";
 import TerminalInput from "@/components/TerminalInput";
 import Green from "@/components/utils/Green";
-import Loading from "@/components/utils/Loading";
 import White from "@/components/utils/White";
-import useTerminal, { TerminalActions } from "@/hooks/terminal.hook";
-import { type TerminalItem } from "@/types/terminal";
+import useTerminal from "@/hooks/terminal.hook";
 import { useClerk } from "@clerk/nextjs";
 import { type NextPage } from "next";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import {
-  Dispatch,
-  SetStateAction,
-  createContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { useRef, useState } from "react";
 
 const Home: NextPage = () => {
-  const router = useRouter();
   const { signOut } = useClerk();
 
   const terminalActions = useTerminal({

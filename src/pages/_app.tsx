@@ -3,8 +3,6 @@ import {
   ClerkProvider,
   SignedIn,
   SignedOut,
-  RedirectToSignIn,
-  SignOutButton,
   RedirectToSignUp,
   RedirectToUserProfile,
 } from "@clerk/nextjs";
@@ -12,7 +10,6 @@ import {
 import { api } from "@/utils/api";
 
 import "@/styles/globals.css";
-import { useState } from "react";
 import { useRouter } from "next/router";
 
 const loginPage = "/login/[[...index]]";

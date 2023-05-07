@@ -1,6 +1,5 @@
 import { type TerminalActions } from "@/hooks/terminal.hook";
 import {
-  type KeyboardEventHandler,
   type KeyboardEvent,
   type RefObject,
   type HTMLInputTypeAttribute,
