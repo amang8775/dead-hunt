@@ -1,8 +1,28 @@
 # Dead-Hunt
 
+<p align = "center">
+<img src="https://github.com/Goel-Bhavye8302/dead-hunt/blob/main/public/assets/Screenshot%202023-05-08%20180329.png">
+</p>
+
 <p align="center">
 A unique soft skills assessment experience that combines the excitement of a treasure hunt, the effectiveness of storytelling, and the challenge of puzzles, resulting in an innovative and immersive experience.
 </p>
+
+## Features 
+Listed below are all the feature included in the project
+
+### Game Featues 
+
+- [x] 5 Stages of the game : Level 1 to 5
+
+- [x] Soft skills assessed 
+
+  1. Critical Thinking
+  2. Memory
+  3. Patience
+  4. Problem Solving
+  5. Eye for Detail
+  6. Resource Management
 
 The game will help to analyze the soft skills like problem solving skill , memory retention and quick decision taking ability of user .
 
