@@ -35,7 +35,7 @@ const DIRECTORIES: any = {
                 "help.txt": {
                   type: "file",
                   contents:
-                    "When you convert binary to decimal(2's complement), combine all numbers available, you'll know where I live, you'll know what to search for, you'll be able!",
+                    "When you convert binary to decimal(2's complement), combine all 4 numbers available, you'll know where I live, you'll know what to search for, you'll be able!",
                 },
               },
             },
