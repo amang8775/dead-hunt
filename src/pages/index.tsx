@@ -626,7 +626,7 @@ const Home: NextPage = () => {
       filePath = pathArray.join("/");
 
       if (
-        filePath === "home/virus/openMe!/1111111110001010.exe" &&
+        filePath === "home/virus/openMe!/1111111110001010.txt" &&
         (gameLevel === 1 || gameLevel == 2) &&
         !mapFileOpened.one
       ) {
@@ -641,7 +641,7 @@ const Home: NextPage = () => {
           levelCleared: newGameLevel,
         });
       } else if (
-        filePath === "home/virus/openMe!/0000000000100010.exe" &&
+        filePath === "home/virus/openMe!/0000000000100010.txt" &&
         (gameLevel === 1 || gameLevel == 2) &&
         !mapFileOpened.two
       ) {
