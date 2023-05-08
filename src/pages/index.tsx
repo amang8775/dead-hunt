@@ -200,6 +200,9 @@ const Home: NextPage = () => {
           <Green>6-</Green> `<White>play</White>` <Green>-&gt;</Green> Start
           your game!
           <br />
+          <Green>7-</Green> `<White>visit [email]</White>` <Green>-&gt;</Green>{" "}
+          visit a user&apos;s profile [Admin Only Command]
+          <br />
         </div>
       );
     },
