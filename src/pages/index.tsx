@@ -24,11 +24,11 @@ const DIRECTORIES: any = {
             "openMe!": {
               type: "folder",
               children: {
-                "0000000000100010.exe": {
+                "0000000000100010.txt": {
                   type: "file",
                   contents: ".1641007",
                 },
-                "1111111110001010.exe": {
+                "1111111110001010.txt": {
                   type: "file",
                   contents: ".6673609",
                 },
