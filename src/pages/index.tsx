@@ -32,6 +32,11 @@ const DIRECTORIES: any = {
                   type: "file",
                   contents: ".6673609",
                 },
+                "help.txt": {
+                  type: "file",
+                  contents:
+                    "When you convert binary to decimal(2's complement), combine all numbers available, you'll know where I live, you'll know what to search for, you'll be able!",
+                },
               },
             },
             "lol.txt": {
