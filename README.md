@@ -60,9 +60,27 @@ Listed below are all the feature included in the project
 
 ## Screenshots 
 
+<p align = "center">
+<img src="https://github.com/Goel-Bhavye8302/dead-hunt/blob/main/public/assets/1.png">
+</p>
+
+<p align = "center">
+<img src="https://github.com/Goel-Bhavye8302/dead-hunt/blob/main/public/assets/2.png">
+</p>
+
+<p align = "center">
+<img src="https://github.com/Goel-Bhavye8302/dead-hunt/blob/main/public/assets/3.png">
+</p>
+
+<p align = "center">
+<img src="https://github.com/Goel-Bhavye8302/dead-hunt/blob/main/public/assets/4.png">
+</p>
+
+<p align = "center">
+<img src="https://github.com/Goel-Bhavye8302/dead-hunt/blob/main/public/assets/5.png">
+</p>
 
 ## Detailed view of the game
-
 
 # Create T3 App
 
