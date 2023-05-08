@@ -24,6 +24,7 @@ export default {
         "dead-white": "#aeaeae",
         "dead-white-more": "#fcfbfc",
         "dead-error": "#ff0000",
+        "dead-red": "#ff0000",
       },
     },
   },

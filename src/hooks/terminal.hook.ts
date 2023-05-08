@@ -44,7 +44,7 @@ const useTerminal = ({
 
   const addInputItem = (item: string) => {
     setInputItems((_) => ({
-      index: _.inputs.length,
+      index: _.inputs.length + 1,
       inputs: [..._.inputs, item],
     }));
   };

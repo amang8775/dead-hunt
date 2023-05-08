@@ -2,6 +2,7 @@ import TerminalWrapper from "@/components/Terminal";
 import TerminalInput from "@/components/TerminalInput";
 import Loading from "@/components/utils/Loading";
 import useTerminal from "@/hooks/terminal.hook";
+import { api } from "@/utils/api";
 import { useSignIn, useSignUp } from "@clerk/nextjs";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -12,10 +13,12 @@ const LoginPage = () => {
   const { isLoaded: isSignInLoaded, signIn } = useSignIn();
   const { isLoaded: isSignUpLoaded, signUp, setActive } = useSignUp();
 
+  const addUserToDB = api.user.create.useMutation();
+
   const terminalActions = useTerminal({
     initialValue: [
       <div key={0}>
-        Help me find my <span className="text-dead-green">mouse</span>!
+        Help me recover my <span className="text-dead-green">System</span>!
       </div>,
       "Login or create an account to continue...",
       "Enter your email...",
@@ -93,8 +96,9 @@ const LoginPage = () => {
         });
         if (signUp.status === "complete") {
           addTerminalItem("Loading...");
+          addUserToDB.mutate({ email: emailAddress });
           await setActive({ session: signUp.createdSessionId });
-          return { continue: false, redirect: true };
+          return { continue: false, redirect: false };
         } else {
           throw signUp.status;
         }

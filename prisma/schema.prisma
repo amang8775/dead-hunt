@@ -12,6 +12,9 @@ datasource db {
 }
 
 model User {
-    id    String @id @default(uuid())
-    email String
+    id           String @id @default(uuid())
+    email        String @unique
+    score        Int    @default(0)
+    levelCleared Int    @default(0)
+    virusLevel   Int    @default(1)
 }
