@@ -38,7 +38,7 @@ export const userRouter = createTRPCRouter({
   }),
   getRank: publicProcedure
     .input(z.object({ email: z.string().email() }))
-    .query(async ({ ctx }) => {
+    .query(async ({ ctx, input }) => {
       const emails = await ctx.prisma.user.findMany({
         orderBy: {
           score: "desc",
@@ -47,8 +47,7 @@ export const userRouter = createTRPCRouter({
           email: true,
         },
       });
-
-      const index = emails.findIndex((v) => v.email);
+      const index = emails.findIndex((v) => v.email === input.email);
       return index;
     }),
   saveGame: publicProcedure
