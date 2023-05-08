@@ -1,5 +1,9 @@
 # Dead-Hunt
 
+<p align="center">
+A unique soft skills assessment experience that combines the excitement of a treasure hunt, the effectiveness of storytelling, and the challenge of puzzles, resulting in an innovative and immersive experience.
+</p>
+
 The game will help to analyze the soft skills like problem solving skill , memory retention and quick decision taking ability of user .
 
 The main soft skill I want to check is how spontaneously user can understand and solve the puzzle .
