@@ -24,9 +24,50 @@ Listed below are all the feature included in the project
   5. Eye for Detail
   6. Resource Management
 
-The game will help to analyze the soft skills like problem solving skill , memory retention and quick decision taking ability of user .
+- [x] 2 Dead ends 
+  1. First on stage 4: Quartz Quary
+  2. Second on stage 5: Mindful Molecules
+  
+- [x] 7 clues
+  
+- [x] User leader board
 
-The main soft skill I want to check is how spontaneously user can understand and solve the puzzle .
+- [x] Admin Panel
+
+- [x] User analytics after game ends
+
+- [x] Overall and each user's analytical in admin panel
+
+- [x] 404 page (route not present error)
+
+- [x] 403 page (insufficient authorization)
+
+- [x] Ability to review previous stage information if stuck on a certain stage
+
+- [x] Skip to skip a stage by discarding any points rewarded for that level
+
+- [x] End game to end the game if done
+
+- [x] Automated test with selenium to test feature functionality
+
+### Authentication 
+
+- [x] User Sign up
+- [x] User Sign in
+- [x] Forgot Password (reset password via email)
+- [x] admin login
+
+### Authorization 
+
+- [x] Play game
+- [x] Access user leader board
+- [x] Access result analysis
+- [x] Only admin can access Admin Panel
+
+## Screenshots 
+
+## Detailed view of the game
+
 
 # Create T3 App
 
