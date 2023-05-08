@@ -24,38 +24,32 @@ Listed below are all the feature included in the project
   5. Eye for Detail
   6. Resource Management
 
-- [x] 2 Dead ends 
-  1. First on stage 4: Quartz Quary
-  2. Second on stage 5: Mindful Molecules
+- [x] Multiple Dead Ends
+  1. Downloads Folder 
+  2. Movies Folder 
+  3. Solution.txt File
+  4. Lol.txt
   
-- [x] 7 clues
+- [x] 8 Clues 
   
-- [x] User leader board
+- [x] User Leaderboard
 
 - [x] Admin Panel
 
-- [x] User analytics after game ends
-
-- [x] Overall and each user's analytical in admin panel
-
-- [x] 404 page (route not present error)
-
-- [x] 403 page (insufficient authorization)
+- [x] Each user's analytics in admin panel
 
 - [x] Ability to review previous stage information if stuck on a certain stage
 
-- [x] Skip to skip a stage by discarding any points rewarded for that level
-
-- [x] End game to end the game if done
-
-- [x] Automated test with selenium to test feature functionality
+- [x] Exit to save game and Restart to restart a new game
 
 ### Authentication 
 
 - [x] User Sign up
 - [x] User Sign in
-- [x] Forgot Password (reset password via email)
-- [x] admin login
+- [x] Sign up to Sign in automatic flow transfer 
+- [x] Single page for auth 
+- [x] Same login page for admin
+- [x] Admin decided by auth metadata 
 
 ### Authorization 
 
@@ -65,6 +59,7 @@ Listed below are all the feature included in the project
 - [x] Only admin can access Admin Panel
 
 ## Screenshots 
+
 
 ## Detailed view of the game
 
