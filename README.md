@@ -8,6 +8,22 @@
 A unique soft skills assessment experience that combines the excitement of a treasure hunt, the effectiveness of storytelling, and the challenge of puzzles, resulting in an innovative and immersive experience.
 </p>
 
+## Features 
+Listed below are all the feature included in the project
+
+### Game Featues 
+
+- [x] 5 Stages of the game : Level 1 to 5
+
+- [x] Soft skills assessed 
+
+  1. Critical Thinking
+  2. Memory
+  3. Patience
+  4. Problem Solving
+  5. Eye for Detail
+  6. Resource Management
+
 The game will help to analyze the soft skills like problem solving skill , memory retention and quick decision taking ability of user .
 
 The main soft skill I want to check is how spontaneously user can understand and solve the puzzle .
