@@ -1,5 +1,9 @@
 # Dead-Hunt
 
+<p align = "center">
+<img src="https://github.com/Goel-Bhavye8302/dead-hunt/blob/main/public/assets/Screenshot%202023-05-08%20180329.png">
+</p>
+
 <p align="center">
 A unique soft skills assessment experience that combines the excitement of a treasure hunt, the effectiveness of storytelling, and the challenge of puzzles, resulting in an innovative and immersive experience.
 </p>
