@@ -73,4 +73,33 @@ export const userRouter = createTRPCRouter({
         },
       });
     }),
+  getUserData: publicProcedure
+    .input(z.object({ email: z.string().email() }))
+    .query(async ({ ctx, input }) => {
+      const user = await ctx.prisma.user.findUniqueOrThrow({
+        where: {
+          email: input.email,
+        },
+      });
+
+      const avg = await ctx.prisma.user.aggregate({
+        _avg: {
+          score: true,
+          levelCleared: true,
+          virusLevel: true,
+        },
+        _max: {
+          score: true,
+          levelCleared: true,
+          virusLevel: true,
+        },
+        _min: {
+          score: true,
+          levelCleared: true,
+          virusLevel: true,
+        },
+      });
+
+      return { user, avg };
+    }),
 });

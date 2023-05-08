@@ -10,6 +10,7 @@ import { api } from "@/utils/api";
 import { useClerk, useUser } from "@clerk/nextjs";
 import { type NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 
 const DIRECTORIES: any = {
@@ -86,6 +87,7 @@ const DIRECTORIES: any = {
 const Home: NextPage = () => {
   const { signOut } = useClerk();
   const clerkUser = useUser();
+  const router = useRouter();
 
   const leaderboardQuery = api.user.getLeaderboard.useQuery();
 
@@ -419,7 +421,12 @@ const Home: NextPage = () => {
     },
   };
 
-  const adminCommandsMap: { [key: string]: () => Promise<void> } = {};
+  const adminCommandsMap: { [key: string]: (cmd: string) => Promise<void> } = {
+    visit: async (cmd: string) => {
+      const email = cmd.split(" ")[1] as string;
+      await router.push(`/user/${email}`);
+    },
+  };
   const gameCommandsMap: { [key: string]: (cmd: string) => Promise<void> } = {
     exit: async () => {
       addTerminalItem(<Green>====== Game Paused =====</Green>);
@@ -766,7 +773,13 @@ const Home: NextPage = () => {
               addInputItem(value);
               addTerminalItem(value);
               if (!defaultCommandsMap[value]) {
-                addTerminalError("Command not found :/ . Use `help`. ");
+                const mainCmd = value.split(" ")[0]!;
+                if (
+                  clerkUser.user?.publicMetadata.isAdmin &&
+                  adminCommandsMap[mainCmd]
+                ) {
+                  adminCommandsMap[mainCmd]!(value);
+                } else addTerminalError("Command not found :/ . Use `help`. ");
               } else defaultCommandsMap[value]!();
             },
             game: async (e, value) => {
