@@ -1,3 +1,9 @@
+# Dead-Hunt
+
+The game will help to analyze the soft skills like problem solving skill , memory retention and quick decision taking ability of user .
+
+The main soft skill I want to check is how spontaneously user can understand and solve the puzzle .
+
 # Create T3 App
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
