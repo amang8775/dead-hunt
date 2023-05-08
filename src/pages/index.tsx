@@ -35,7 +35,7 @@ const DIRECTORIES: any = {
                 "help.txt": {
                   type: "file",
                   contents:
-                    "When you convert binary to decimal(2's complement), combine all 4 numbers available, you'll know where I live, you'll know what to search for, you'll be able!",
+                    "When you convert binary to decimal(2's complement), combine all 4 numbers available, use the 2 numbers and you'll know where I live, you'll know what to search for, you'll be able!",
                 },
               },
             },
@@ -457,6 +457,7 @@ const Home: NextPage = () => {
             <White>I am more of a dog person! </White>
           </div>
         );
+        showVirusLevel(virusLevel + 1);
       }
     },
     help: async () => {
@@ -504,9 +505,9 @@ const Home: NextPage = () => {
           currPath = currPath.children[item];
         else break;
       }
-      if (pwd === "" && cmd.split(" ")[1] === "-a") {
+      if (pwd === "" && cmd.split(" ")[1] === "-a" && gameLevel < 4) {
         setGameLevel(4);
-        addTerminalItem(<Green>====== Level {gameLevel} Cleared =====</Green>);
+        addTerminalItem(<Green>====== Level 4 Cleared =====</Green>);
         saveGameMutation.mutate({
           virusLevel: virusLevel,
           email: clerkUser.user!.primaryEmailAddress!.emailAddress,
@@ -577,7 +578,7 @@ const Home: NextPage = () => {
 
       if (newPath.split("/")[0] === "home" && gameLevel === 0) {
         setGameLevel(1);
-        addTerminalItem(<Green>====== Level {gameLevel} Cleared =====</Green>);
+        addTerminalItem(<Green>====== Level 1 Cleared =====</Green>);
         saveGameMutation.mutate({
           virusLevel: virusLevel,
           email: clerkUser.user!.primaryEmailAddress!.emailAddress,
@@ -627,13 +628,15 @@ const Home: NextPage = () => {
 
       if (
         filePath === "home/virus/openMe!/1111111110001010.txt" &&
-        (gameLevel === 1 || gameLevel == 2) &&
+        gameLevel < 3 &&
         !mapFileOpened.one
       ) {
         setMapFileOpened((_) => ({ ..._, one: true }));
         const newGameLevel = gameLevel + 1;
         setGameLevel(newGameLevel);
-        addTerminalItem(<Green>====== Level {gameLevel} Cleared =====</Green>);
+        addTerminalItem(
+          <Green>====== Level {newGameLevel} Cleared =====</Green>
+        );
         saveGameMutation.mutate({
           virusLevel: virusLevel,
           email: clerkUser.user!.primaryEmailAddress!.emailAddress,
@@ -642,13 +645,15 @@ const Home: NextPage = () => {
         });
       } else if (
         filePath === "home/virus/openMe!/0000000000100010.txt" &&
-        (gameLevel === 1 || gameLevel == 2) &&
+        gameLevel < 3 &&
         !mapFileOpened.two
       ) {
         setMapFileOpened((_) => ({ ..._, two: true }));
         const newGameLevel = gameLevel + 1;
         setGameLevel(newGameLevel);
-        addTerminalItem(<Green>====== Level {gameLevel} Cleared =====</Green>);
+        addTerminalItem(
+          <Green>====== Level {newGameLevel} Cleared =====</Green>
+        );
         saveGameMutation.mutate({
           virusLevel: virusLevel,
           email: clerkUser.user!.primaryEmailAddress!.emailAddress,
@@ -696,9 +701,9 @@ const Home: NextPage = () => {
       if (currPath.type !== "hidden" || !currPath.contents) return;
       filePath = pathArray.join("/");
 
-      if (filePath === ".solution.txt" && gameLevel === 4) {
+      if (filePath === ".solution.txt" && gameLevel < 5) {
         setGameLevel(5);
-        addTerminalItem(<Green>====== Level {gameLevel} Cleared =====</Green>);
+        addTerminalItem(<Green>====== Level 5 Cleared =====</Green>);
         saveGameMutation.mutate({
           virusLevel: virusLevel,
           email: clerkUser.user!.primaryEmailAddress!.emailAddress,
@@ -726,7 +731,7 @@ const Home: NextPage = () => {
       });
       addTerminalItem(
         <div>
-          <Green>====== Level {gameLevel} Cleared =====</Green>
+          <Green>====== Level 6 Cleared =====</Green>
           <br />
           <White>The virus has been killed!</White>
           <br />
