@@ -66,7 +66,7 @@ const TerminalInput = ({
       }}
       type={stateInputTypeMap[appState]}
       style={{ caretShape: "underscore" }}
-      className="text-dead-white-more"
+      className="w-full text-dead-white-more"
     />
   );
 };
